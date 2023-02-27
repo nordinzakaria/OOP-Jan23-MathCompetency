@@ -35,8 +35,6 @@ public class School {
     }
 
     public void setNumParticipants(int num) {
-        marks = new Marks();
-        marks.createData(num);
-
+        marks = new Marks(num);
     }
 }
