@@ -12,7 +12,7 @@ public class DSchoolList {
 
     public void display() {
         for (int i=0; i<schools.size(); i++) {
-            System.out.print(schools.get(i));
+            System.out.println("School:" + schools.get(i).getName());
         }
     }
     // test this class through a main method here

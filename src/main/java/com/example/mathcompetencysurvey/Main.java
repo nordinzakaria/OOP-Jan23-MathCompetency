@@ -30,5 +30,9 @@ public class Main {
 
         float mark = marks.getMark(0);
         System.out.println("Marks for student 0 is " + mark);
+
+        // we want a class that enables reading a file like this..
+        FileLoader fl = new FileLoader("filename.txt");
+        fl.readAnddisplay();
     }
 }
