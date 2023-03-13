@@ -1,6 +1,7 @@
 package com.example.mathcompetencysurvey;
 
 public class Ministry {
+    private String year;
     private String ministryname;
     // attributes
     private DSchoolList schoollist;
@@ -8,6 +9,14 @@ public class Ministry {
 
     public Ministry(String pic) {
         this.pic = pic;
+    }
+
+    public String getYear() {
+        return year;
+    }
+
+    public void setYear(String year) {
+        this.year = year;
     }
 
     public String getMinistryname() {
@@ -35,7 +44,7 @@ public class Ministry {
     }
 
     public static void main(String args[]) {
-
+        // application test code
 
     }
 }
