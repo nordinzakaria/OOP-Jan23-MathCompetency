@@ -2,7 +2,7 @@ package com.example.mathcompetencysurvey;
 
 public class Ministry {
     private String year;
-    private String ministryname;
+    protected static String ministryname;
     // attributes
     private DSchoolList schoollist;
     private String pic;
@@ -19,12 +19,12 @@ public class Ministry {
         this.year = year;
     }
 
-    public String getMinistryname() {
+    public static String getMinistryname() {
         return ministryname;
     }
 
-    public void setMinistryname(String ministryname) {
-        this.ministryname = ministryname;
+    public static void setMinistryname(String ministryname) {
+        Ministry.ministryname = ministryname;
     }
 
     public DSchoolList getSchoollist() {
@@ -44,7 +44,20 @@ public class Ministry {
     }
 
     public static void main(String args[]) {
+
+        Ministry.setMinistryname("MOE");
+
         // application test code
+        Ministry ministry21 = new Ministry("Abdul Majid");
+        ministry21.setYear("2021");
+
+        Ministry ministry22 = new Ministry("Abdul Sattar");
+        ministry22.setYear("2022");
+
+        System.out.println("Ministry name for y 2021: "+
+                ministry21.getMinistryname());
+        System.out.println("Ministry name for y 2022: "+
+                ministry22.getMinistryname());
 
     }
 }
