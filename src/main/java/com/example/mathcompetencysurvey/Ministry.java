@@ -1,14 +1,24 @@
 package com.example.mathcompetencysurvey;
 
+import java.util.ArrayList;
+
 public class Ministry {
     private String year;
     protected static String ministryname;
     // attributes
     private DSchoolList schoollist;
     private String pic;
+    private ArrayList<Examiner> examiners = new ArrayList<Examiner>();
 
     public Ministry(String pic) {
         this.pic = pic;
+    }
+
+    public Examiner getExaminer(int i) {
+        return examiners.get(i);
+    }
+    public void addExaminer(Examiner examiner) {
+        
     }
 
     public String getYear() {
