@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class DSchoolList {
     // data section
-    ArrayList<School> schools = new ArrayList<>();
+    public ArrayList<School> schools = new ArrayList<>();
 
     public void addSchool(School sc) {
         schools.add(sc);

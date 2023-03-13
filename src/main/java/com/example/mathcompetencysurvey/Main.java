@@ -32,7 +32,11 @@ public class Main {
         System.out.println("Marks for student 0 is " + mark);
 
         // we want a class that enables reading a file like this..
-        FileLoader fl = new FileLoader("filename.txt");
-        fl.readAnddisplay();
+        //FileLoader fl = new FileLoader("filename.txt");
+        //fl.readAnddisplay();
+
+        // we want a facade class for Database
+        // Database db = new Database();
+        // db.read();
     }
 }
