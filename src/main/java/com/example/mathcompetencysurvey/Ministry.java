@@ -8,9 +8,9 @@ public class Ministry {
     // attributes
     private DSchoolList schoollist;
     private String pic;
-    private ArrayList<PartimeExaminer> examiners = new ArrayList<PartimeExaminer>();
-    private ArrayList<FulltimeExaminer> examiners = new ArrayList<FulltimeExaminer>();
 
+    // Inheritance allows polymorphism
+    private ArrayList<Examiner> examiners = new ArrayList<Examiner>();
     public Ministry(String pic) {
         this.pic = pic;
     }
@@ -63,8 +63,9 @@ public class Ministry {
         ministry21.setYear("2021");
 
         // Task: add 1 examiner to ministry21
-        Examiner examiner = new Examiner("Ali", "5155");
+        FulltimeExaminer examiner = new FulltimeExaminer("Ali", "5155");
         ministry21.addExaminer(examiner);
+        // inheritance allows for polymorphism
 
         Ministry ministry22 = new Ministry("Abdul Sattar");
         ministry22.setYear("2022");

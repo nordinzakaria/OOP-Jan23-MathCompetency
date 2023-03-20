@@ -1,14 +1,11 @@
 package com.example.mathcompetencysurvey;
 
-public class PartimeExaminer {
-    private String name;
-    private String id;
+public class PartimeExaminer extends Examiner {
     private int dailyrate;
     private int numdays;
 
     public PartimeExaminer(String name, String id) {
-        this.name = name;
-        this.id = id;
+        super(name, id);
     }
 
     public int getDailyrate() {
@@ -29,22 +26,6 @@ public class PartimeExaminer {
 
     public float calcPay() {
         return this.dailyrate * this.numdays;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
 }
