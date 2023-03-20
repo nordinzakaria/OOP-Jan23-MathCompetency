@@ -22,6 +22,15 @@ public class Ministry {
         examiners.add(examiner);
     }
 
+    public float calcTotalPay() {
+        float sum = 0;
+        for (int i=0; i<examiners.size(); i++) {
+            Examiner examiner = examiners.get(i);
+            sum += examiner.calcPay(); // polymorphism
+        }
+        return sum;
+    }
+
     public String getYear() {
         return year;
     }

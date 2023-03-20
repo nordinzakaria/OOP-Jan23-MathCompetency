@@ -1,6 +1,7 @@
 package com.example.mathcompetencysurvey;
 
-public class Examiner {
+// an abstract class is one which is incomplete
+public abstract class Examiner {
     private String name;
     private String id;
 
@@ -12,6 +13,9 @@ public class Examiner {
     public String getName() {
         return name;
     }
+
+    // abstract method = no body
+    public abstract float calcPay();
 
     public void setName(String name) {
         this.name = name;
