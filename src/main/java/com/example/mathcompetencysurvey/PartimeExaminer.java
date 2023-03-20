@@ -28,7 +28,7 @@ public class PartimeExaminer {
     }
 
     public float calcPay() {
-        return 
+        return this.dailyrate * this.numdays;
     }
 
     public String getName() {

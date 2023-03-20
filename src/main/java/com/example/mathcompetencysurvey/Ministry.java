@@ -8,7 +8,8 @@ public class Ministry {
     // attributes
     private DSchoolList schoollist;
     private String pic;
-    private ArrayList<Examiner> examiners = new ArrayList<Examiner>();
+    private ArrayList<PartimeExaminer> examiners = new ArrayList<PartimeExaminer>();
+    private ArrayList<FulltimeExaminer> examiners = new ArrayList<FulltimeExaminer>();
 
     public Ministry(String pic) {
         this.pic = pic;

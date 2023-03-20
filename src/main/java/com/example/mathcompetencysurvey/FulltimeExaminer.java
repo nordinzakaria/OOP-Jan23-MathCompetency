@@ -1,14 +1,11 @@
 package com.example.mathcompetencysurvey;
 
-public class FulltimeExaminer {
-    private String name;
-    private String id;
+// this is a subclass that inherits from superclass Examiner
+public class FulltimeExaminer extends Examiner {
     private int monthlypay;
 
-
     public FulltimeExaminer(String name, String id) {
-        this.name = name;
-        this.id = id;
+        super(name, id);    // invoke constructor for superclass
     }
 
     public int getMonthlypay() {
@@ -21,22 +18,6 @@ public class FulltimeExaminer {
 
     public float calcPay() {
         return getMonthlypay();
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
 }
