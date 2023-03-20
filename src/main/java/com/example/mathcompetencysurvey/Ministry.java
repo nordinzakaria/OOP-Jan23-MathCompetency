@@ -18,7 +18,7 @@ public class Ministry {
         return examiners.get(i);
     }
     public void addExaminer(Examiner examiner) {
-        
+        examiners.add(examiner);
     }
 
     public String getYear() {
@@ -61,6 +61,10 @@ public class Ministry {
         Ministry ministry21 = new Ministry("Abdul Majid");
         ministry21.setYear("2021");
 
+        // Task: add 1 examiner to ministry21
+        Examiner examiner = new Examiner("Ali", "5155");
+        ministry21.addExaminer(examiner);
+
         Ministry ministry22 = new Ministry("Abdul Sattar");
         ministry22.setYear("2022");
 
@@ -68,6 +72,7 @@ public class Ministry {
                 ministry21.getMinistryname());
         System.out.println("Ministry name for y 2022: "+
                 ministry22.getMinistryname());
+
 
     }
 }
