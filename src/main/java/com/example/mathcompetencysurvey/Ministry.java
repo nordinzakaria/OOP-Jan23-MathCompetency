@@ -76,6 +76,9 @@ public class Ministry {
         ministry21.addExaminer(examiner);
         // inheritance allows for polymorphism
 
+        float total = ministry21.calcTotalPay();
+        System.out.println("Total for ministry21 is "+ total);
+
         Ministry ministry22 = new Ministry("Abdul Sattar");
         ministry22.setYear("2022");
 
@@ -83,6 +86,7 @@ public class Ministry {
                 ministry21.getMinistryname());
         System.out.println("Ministry name for y 2022: "+
                 ministry22.getMinistryname());
+
 
 
     }

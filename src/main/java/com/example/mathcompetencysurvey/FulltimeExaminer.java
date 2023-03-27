@@ -20,4 +20,8 @@ public class FulltimeExaminer extends Examiner {
         return getMonthlypay();
     }
 
+    public float calcEPFcontribution() {
+        return 0.1f * this.calcPay();
+    }
+
 }
