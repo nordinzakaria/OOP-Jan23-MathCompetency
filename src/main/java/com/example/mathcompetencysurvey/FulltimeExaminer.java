@@ -1,7 +1,9 @@
 package com.example.mathcompetencysurvey;
 
 // this is a subclass that inherits from superclass Examiner
-public class FulltimeExaminer extends Examiner {
+public class FulltimeExaminer extends Examiner
+        // also implement the behavior of EPF contributor
+        implements EPFContributorI {
     private int monthlypay;
 
     public FulltimeExaminer(String name, String id) {

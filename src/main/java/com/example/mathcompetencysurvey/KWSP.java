@@ -3,9 +3,9 @@ package com.example.mathcompetencysurvey;
 import java.util.ArrayList;
 
 public class KWSP {
-    private ArrayList<EPFContributor> contributors = new ArrayList<EPFContributor>();
+    private ArrayList<EPFContributorI> contributors = new ArrayList<EPFContributorI>();
 
-    public void addContributor(EPFContributor contrib) {
+    public void addContributor(EPFContributorI contrib) {
         contributors.add(contrib);
     }
 
@@ -15,5 +15,12 @@ public class KWSP {
             sum += contributors.get(i).calcEPFcontribution();
         }
         return sum;
+    }
+
+    public static void main(String args[]) {
+        KWSP kwsp = new KWSP();
+        FulltimeExaminer examiner = new FulltimeExaminer("Ali", "122");
+        kwsp.addContributor(examiner);
+
     }
 }
