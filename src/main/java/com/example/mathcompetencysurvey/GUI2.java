@@ -11,7 +11,7 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
-public class GUI extends Application {
+public class GUI2 extends Application {
 
     public static void main(String[] args) {
         launch(args);
@@ -22,26 +22,34 @@ public class GUI extends Application {
         Group root = new Group();
         Scene scene = new Scene(root, 300, 130, Color.WHITE);
 
+
         GridPane gridpane = new GridPane();
+
+
+        GridPane gridpane0 = new GridPane();
+        gridpane0.add(new Label("Survey"), 0, 0);
+
         ColumnConstraints col1 = new ColumnConstraints();
         col1.setPercentWidth(50);
         ColumnConstraints col2 = new ColumnConstraints();
         col2.setPercentWidth(50);
-        gridpane.getColumnConstraints().addAll(col1,col2);
 
+        GridPane gridpane1 = new GridPane();
+        gridpane1.getColumnConstraints().addAll(col1,col2);
         Label label = new Label("Year");
-        gridpane.add(label, 0, 0);
-
+        gridpane1.add(label, 0, 0);
         TextField tf = new TextField();
-        gridpane.add(tf, 1, 0);
+        gridpane1.add(tf, 1, 0);
 
+        GridPane gridpane2 = new GridPane();
+        gridpane2.getColumnConstraints().addAll(col1,col2);
         Button okbutton = new Button("OK");
         Button resetbutton = new Button("Reset");
-        gridpane.add(okbutton, 0, 1);
-        gridpane.add(resetbutton,1, 1);
+        gridpane2.add(okbutton, 0, 0);
+        gridpane2.add(resetbutton,1, 0);
 
 
-
+        gridpane.add(gridpane0, 0, 0);
 
 
         root.getChildren().add(gridpane);
