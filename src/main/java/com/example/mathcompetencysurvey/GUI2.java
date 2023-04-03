@@ -21,16 +21,14 @@ class ButtonHandler implements EventHandler<ActionEvent>
 }
 
 public class GUI2 extends Application {
-
-    public static void main(String[] args) {
-        launch(args);
-    }
+    // put attributes here
+    private MinistrySurvey surveys[] = new MinistrySurvey[5];
+    int counter;
 
     @Override
     public void start(Stage primaryStage) {
         Group root = new Group();
         Scene scene = new Scene(root, 300, 130, Color.WHITE);
-
 
         GridPane gridpane = new GridPane();
 
@@ -57,17 +55,17 @@ public class GUI2 extends Application {
         gridpane2.add(okbutton, 0, 0);
         gridpane2.add(resetbutton,1, 0);
 
-        okbutton.setOnAction(new ButtonHandler());
+        //okbutton.setOnAction(new ButtonHandler());
 
         okbutton.setOnAction( // anonymous class
                 new EventHandler<ActionEvent>() {
                     @Override
                     public void handle(ActionEvent event) {
-                        System.out.println("Hello World!");
+                        System.out.println("Hello World!" + counter);
+                        counter++;
                     }
                 }
         );
-
 
         gridpane.add(gridpane0, 0, 0);
         gridpane.add(gridpane1, 0, 1);
@@ -78,4 +76,10 @@ public class GUI2 extends Application {
         primaryStage.setScene(scene);
         primaryStage.show();
     }
+
+    public static void main(String[] args) {
+        launch(args);
+    }
+
+
 }
