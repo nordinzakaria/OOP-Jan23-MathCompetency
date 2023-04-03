@@ -22,6 +22,7 @@ class ButtonHandler implements EventHandler<ActionEvent>
 
 public class GUI2 extends Application {
     // put attributes here
+    private MinisterInCharge minister;
     private MinistrySurvey surveys[] = new MinistrySurvey[5];
     int counter;
 
@@ -55,6 +56,14 @@ public class GUI2 extends Application {
         gridpane2.add(okbutton, 0, 0);
         gridpane2.add(resetbutton,1, 0);
 
+        GridPane gridpane3 = new GridPane();
+        gridpane3.getColumnConstraints().addAll(col1,col2);
+        Label ministerlabel = new Label("Minister");
+        TextField ministertf = new TextField();
+        gridpane3.add(ministerlabel, 0, 0);
+        gridpane3.add(ministertf,1, 0);
+
+
         //okbutton.setOnAction(new ButtonHandler());
 
         okbutton.setOnAction( // anonymous class
@@ -63,6 +72,7 @@ public class GUI2 extends Application {
                     public void handle(ActionEvent event) {
                         System.out.println("Hello World!" + counter);
                         MinistrySurvey ms = new MinistrySurvey("The PIC");
+                        ms.setYear(tf.getText());
                         surveys[counter] = ms;
                         counter++;
                     }
@@ -72,6 +82,7 @@ public class GUI2 extends Application {
         gridpane.add(gridpane0, 0, 0);
         gridpane.add(gridpane1, 0, 1);
         gridpane.add(gridpane2, 0, 2);
+        gridpane.add(gridpane3, 0, 3);
 
 
         root.getChildren().add(gridpane);
