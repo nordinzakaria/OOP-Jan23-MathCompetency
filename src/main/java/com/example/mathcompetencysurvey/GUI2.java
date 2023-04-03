@@ -76,7 +76,8 @@ public class GUI2 extends Application {
                         surveys[counter] = ms;
                         counter++;
 
-                        minister = new MinisterInCharge(ministertf.getText());
+                        minister =
+                                MinisterInCharge.createMinister(ministertf.getText());
                     }
                 }
         );

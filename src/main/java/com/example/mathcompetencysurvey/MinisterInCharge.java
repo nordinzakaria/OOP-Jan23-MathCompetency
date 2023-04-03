@@ -8,13 +8,16 @@ public class MinisterInCharge {
         this.name = name;
     }
 
+    // Singleton pattern
     public static MinisterInCharge createMinister(String name) {
-        if (ministerAppointed == False) {
-            ministerAppointed = True;
+        if (ministerAppointed == false) {
+            ministerAppointed = true;
             return new MinisterInCharge(name);
         }
-        else
+        else {
             System.out.println("Berapa banyak dah..");
+            return null;
+        }
     }
 
     public String getName() {
