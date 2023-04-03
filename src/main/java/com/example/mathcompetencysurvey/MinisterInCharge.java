@@ -2,9 +2,19 @@ package com.example.mathcompetencysurvey;
 
 public class MinisterInCharge {
     private String name;
+    private static boolean ministerAppointed;
 
-    public MinisterInCharge(String name) {
+    private MinisterInCharge(String name) {
         this.name = name;
+    }
+
+    public static MinisterInCharge createMinister(String name) {
+        if (ministerAppointed == False) {
+            ministerAppointed = True;
+            return new MinisterInCharge(name);
+        }
+        else
+            System.out.println("Berapa banyak dah..");
     }
 
     public String getName() {

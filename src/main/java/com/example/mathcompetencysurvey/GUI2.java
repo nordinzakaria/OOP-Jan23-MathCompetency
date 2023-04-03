@@ -75,6 +75,8 @@ public class GUI2 extends Application {
                         ms.setYear(tf.getText());
                         surveys[counter] = ms;
                         counter++;
+
+                        minister = new MinisterInCharge(ministertf.getText());
                     }
                 }
         );
