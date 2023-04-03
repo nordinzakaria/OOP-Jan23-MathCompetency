@@ -1,6 +1,8 @@
 package com.example.mathcompetencysurvey;
 
 import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -10,6 +12,13 @@ import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+
+class ButtonHandler implements EventHandler<ActionEvent>
+{
+    public void handle(ActionEvent event) {
+        System.out.println("Hello World!");
+        }
+}
 
 public class GUI2 extends Application {
 
@@ -48,8 +57,21 @@ public class GUI2 extends Application {
         gridpane2.add(okbutton, 0, 0);
         gridpane2.add(resetbutton,1, 0);
 
+        okbutton.setOnAction(new ButtonHandler());
+
+        okbutton.setOnAction( // anonymous class
+                new EventHandler<ActionEvent>() {
+                    @Override
+                    public void handle(ActionEvent event) {
+                        System.out.println("Hello World!");
+                    }
+                }
+        );
+
 
         gridpane.add(gridpane0, 0, 0);
+        gridpane.add(gridpane1, 0, 1);
+        gridpane.add(gridpane2, 0, 2);
 
 
         root.getChildren().add(gridpane);
