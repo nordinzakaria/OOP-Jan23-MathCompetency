@@ -62,6 +62,8 @@ public class GUI2 extends Application {
                     @Override
                     public void handle(ActionEvent event) {
                         System.out.println("Hello World!" + counter);
+                        MinistrySurvey ms = new MinistrySurvey("The PIC");
+                        surveys[counter] = ms;
                         counter++;
                     }
                 }
