@@ -2,7 +2,7 @@ package com.example.mathcompetencysurvey;
 
 import java.util.ArrayList;
 
-public class Ministry {
+public class MinistrySurvey {
     private String year;
     protected static String ministryname;
     // attributes
@@ -11,7 +11,7 @@ public class Ministry {
 
     // Inheritance allows polymorphism
     private ArrayList<Examiner> examiners = new ArrayList<Examiner>();
-    public Ministry(String pic) {
+    public MinistrySurvey(String pic) {
         this.pic = pic;
     }
 
@@ -44,7 +44,7 @@ public class Ministry {
     }
 
     public static void setMinistryname(String ministryname) {
-        Ministry.ministryname = ministryname;
+        MinistrySurvey.ministryname = ministryname;
     }
 
     public DSchoolList getSchoollist() {
@@ -65,10 +65,10 @@ public class Ministry {
 
     public static void main(String args[]) {
 
-        Ministry.setMinistryname("MOE");
+        MinistrySurvey.setMinistryname("MOE");
 
         // application test code
-        Ministry ministry21 = new Ministry("Abdul Majid");
+        MinistrySurvey ministry21 = new MinistrySurvey("Abdul Majid");
         ministry21.setYear("2021");
 
         // Task: add 1 examiner to ministry21
@@ -79,7 +79,7 @@ public class Ministry {
         float total = ministry21.calcTotalPay();
         System.out.println("Total for ministry21 is "+ total);
 
-        Ministry ministry22 = new Ministry("Abdul Sattar");
+        MinistrySurvey ministry22 = new MinistrySurvey("Abdul Sattar");
         ministry22.setYear("2022");
 
         System.out.println("Ministry name for y 2021: "+
